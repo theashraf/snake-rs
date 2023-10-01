@@ -51,7 +51,7 @@ impl Game {
             _ => None,
         };
 
-        if dir.unwrap() == self.snake.head_direction().opposite() {
+        if dir.is_none() || dir.unwrap() == self.snake.head_direction() {
             return;
         }
 
